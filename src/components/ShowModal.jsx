@@ -214,22 +214,24 @@ const ShowModal = ({ data, showModal, setShowModal }) => {
               <span className="end-title"> Seasons </span>{' '}
               {seasonDetail.length !== 0 ? (
                 <div className="end-container">
-                  {seasonDetail.map((season, key) => (
-                    <div key={key}>
-                      {season.episode_count === 0 ? null : (
-                        <div>
-                          <ShowSeasonPanel
-                            isAdded={isAdded}
-                            showId={data.id}
-                            currentEpisode={0}
-                            data={season}
-                            key={key}
-                          />
-                          <hr className="divider"></hr>
-                        </div>
-                      )}
-                    </div>
-                  ))}
+                  {seasonDetail
+                    .filter((season) => season.season_number !== 0)
+                    .map((season, key) => (
+                      <div key={key}>
+                        {season.episode_count === 0 ? null : (
+                          <div>
+                            <ShowSeasonPanel
+                              isAdded={isAdded}
+                              showId={data.id}
+                              currentEpisode={0}
+                              data={season}
+                              key={key}
+                            />
+                            <hr className="divider"></hr>
+                          </div>
+                        )}
+                      </div>
+                    ))}
                 </div>
               ) : (
                 <div> </div>
