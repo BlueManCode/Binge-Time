@@ -1,0 +1,13 @@
+Bugs:
+
+1. showTracker components shows episodes that have not yet aired
+2. new episode and season data not being fetched if a show is added
+3. if all seasons are marked watched from the showModal the app crashes as it reaches the tab1
+
+To do:
+
+1. upcoming episode/season info in the show showModal
+2. search tab show cards transition
+3. performance cacheing
+4. tab 2
+5. tab 4

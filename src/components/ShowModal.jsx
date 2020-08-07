@@ -105,6 +105,7 @@ const ShowModal = ({ data, showModal, setShowModal }) => {
     <IonModal
       onDidDismiss={() => {
         setShowModal(false);
+        window.location.reload();
       }}
       className="body"
       isOpen={showModal}>
