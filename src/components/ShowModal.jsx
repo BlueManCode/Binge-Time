@@ -90,6 +90,7 @@ const ShowModal = ({ data, showModal, setShowModal }) => {
         currentEpisode: 1,
         currentSeason: 1,
         totalWatchTime: 0,
+        completed: false,
         isOver: moreData.status === 'Ended' ? true : false,
         seasons: [],
       };

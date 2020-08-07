@@ -36,13 +36,15 @@ const Tab1 = () => {
               </div>
             ) : (
               <div>
-                {temp.map((item, key) => (
-                  <ShowCardTracker
-                    key={key}
-                    showData={item}
-                    addedShows={temp}
-                  />
-                ))}
+                {temp
+                  .filter((item) => item.completed === false)
+                  .map((item, key) => (
+                    <ShowCardTracker
+                      key={key}
+                      showData={item}
+                      addedShows={temp}
+                    />
+                  ))}
               </div>
             )}
           </div>

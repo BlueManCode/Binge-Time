@@ -37,7 +37,7 @@ const ShowTrackerCard = ({ showData }) => {
             temp[index].seasons[i].season_number !== 0
           ) {
             setCurrentEpisode(j + 1);
-            setCurrentSeason(i);
+            setCurrentSeason(temp[index].seasons[i].season_number);
             i = 10000;
             j = 10000;
           }
@@ -48,7 +48,7 @@ const ShowTrackerCard = ({ showData }) => {
 
   useEffect(() => {
     getCurrentShowData();
-  }, [key]);
+  }, [key, getCurrentShowData]);
 
   useEffect(() => {
     const temp = JSON.parse(localStorage.getItem('master'));
@@ -93,7 +93,7 @@ const ShowTrackerCard = ({ showData }) => {
         setTotalWatchedEpisodes(showData.totalWatchedEpisodes);
       }
     }
-    // console.log(episodeData);
+    console.log(episodeData);
   }, [
     episodeData,
     totalWatchedEpisodes,
@@ -124,8 +124,17 @@ const ShowTrackerCard = ({ showData }) => {
 
     temp[index].seasons[seasonIndex].episode_list[episodeIndex].watched = true;
 
+    // if the last season and the last episode
+    if (
+      seasonIndex + 1 === temp[index].seasons.length &&
+      episodeIndex + 1 === temp[index].seasons[seasonIndex].episode_list.length
+    ) {
+      temp[index].seasons[seasonIndex].episode_list[
+        episodeIndex
+      ].watched = true;
+      temp[index].completed = true;
+    }
     localStorage.setItem('master', JSON.stringify(temp));
-
     getCurrentShowData();
 
     setIsLoading(false);
