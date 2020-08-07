@@ -18,3 +18,8 @@
 .scroll {
   height: 100%;
 }
+
+.search-results {
+  column-count: 3;
+  margin-top: 10px;
+}

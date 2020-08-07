@@ -17,9 +17,7 @@ const ShowCard = ({ data }) => {
           setShowModal={setShowModal}
           data={data}
         />
-      ) : (
-        <div> </div>
-      )}{' '}
+      ) : null}
       {data.poster_path ? (
         <div className="displayCard">
           <img

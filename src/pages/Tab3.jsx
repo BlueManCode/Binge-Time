@@ -122,12 +122,7 @@ const Tab3 = () => {
           )}{' '}
           {/* search result over here */}{' '}
           {searchTerm ? (
-            <div
-              style={{
-                columnCount: '3',
-                marginTop: '10px',
-              }}>
-              {' '}
+            <div className="search-results">
               {searchResults.map((data, key) => (
                 <ShowCard key={key} data={data} />
               ))}{' '}

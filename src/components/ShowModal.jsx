@@ -13,6 +13,24 @@ const ShowModal = ({ data, showModal, setShowModal }) => {
   const [subData, setSubData] = useState([]);
   const [seasonDetail, setSeasonDetail] = useState([]);
 
+  function checkIfComplete() {
+    if (isAdded) {
+      let count = 0;
+      const temp = JSON.parse(localStorage.getItem('master'));
+      const index = temp.findIndex((item) => item.id === moreData.id);
+      const totalSeasons = temp[index].seasons.length;
+      for (let i = 0; i < totalSeasons; i++) {
+        for (let j = 0; j < temp[index].seasons[i].episode_list.length; j++) {
+          if (temp[index].seasons[i].episode_list[j].watched === false) {
+            count = count + 1;
+          }
+        }
+      }
+      temp[index].completed = count === 0 ? true : false;
+      localStorage.setItem('master', JSON.stringify(temp));
+    }
+  }
+
   useEffect(() => {
     if (moreData.length === 0) {
       const url =
@@ -105,6 +123,7 @@ const ShowModal = ({ data, showModal, setShowModal }) => {
     <IonModal
       onDidDismiss={() => {
         setShowModal(false);
+        checkIfComplete();
         window.location.reload();
       }}
       className="body"

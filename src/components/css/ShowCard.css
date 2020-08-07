@@ -6,7 +6,23 @@
   margin-bottom: 10px;
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
+  animation-name: display-card;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  transition: ease-in-out;
 }
+
+@keyframes display-card {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
 
 .image {
   -webkit-column-break-inside: avoid;
