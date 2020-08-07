@@ -1,0 +1,23 @@
+.season-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 4.5vw;
+  margin-bottom: 4vw;
+  margin-top: 4vw;
+}
+
+.season-title {
+  overflow: hidden;
+  width: 23vw;
+}
+
+.season-check {
+  margin-right: 2vw;
+  --border-radius: 100%;
+  --size: 8.5vw;
+  --border-color: rgb(125, 119, 224);
+  --checkmark-width: 0.5vw;
+  --background-checked: linear-gradient(to bottom right, rgb(153, 122, 247), rgb(223, 109, 254));
+  --border-color-checked: rgb(21, 22, 27);
+}

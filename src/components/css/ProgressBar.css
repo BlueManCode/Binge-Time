@@ -1,0 +1,22 @@
+.progress-bar-container {
+  width: 40%;
+  height: 3vw;
+  background: rgb(38, 37, 42);
+  border-radius: 2vw;
+  margin-right: 2vw;
+}
+
+.progress-bar {
+  width: 0;
+  height: 3vw;
+  background: linear-gradient(to right, rgb(153, 122, 247), rgb(223, 109, 254));
+  border-radius: 2vw;
+  animation-name: progress-bar;
+  animation-duration: 2s;
+}
+
+@keyframes progress-bar {
+  0% {
+    width: 0;
+  }
+}

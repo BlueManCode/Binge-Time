@@ -1,0 +1,14 @@
+.content-container {
+  --background: rgb(21, 22, 27);
+  --color: white;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+}
+
+.big-box {
+  width: 100%;
+  height: 100%;
+}

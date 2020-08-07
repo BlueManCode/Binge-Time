@@ -1,0 +1,10 @@
+.tab-btn {
+
+  background: rgb(21, 22, 27);
+  --color-selected: white;
+  --ripple-color: white;
+}
+
+.tab-bar {
+  background: rgb(21, 22, 27);
+}

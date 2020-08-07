@@ -1,0 +1,50 @@
+.show-tracker-card-container {
+  display: flex;
+}
+
+.show-tracker-card-container img {
+  width: 25vw;
+}
+
+.card-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 2vw 0 0 2vw;
+}
+
+.card-middle {
+  margin: 2vw 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-middle span {
+  opacity: 0.2;
+  margin-right: auto;
+}
+
+.show-tracker-card-progressbar-container {
+  width: 70%;
+  height: 3vw;
+  background: rgb(38, 37, 42);
+  border-radius: 2vw;
+  margin-right: auto;
+}
+
+.show-tracker-card-progressbar {
+  width: 10%;
+  height: 3vw;
+  background: linear-gradient(to right, rgb(153, 122, 247), rgb(223, 109, 254));
+  border-radius: 2vw;
+  animation-name: progress-bar;
+  animation-duration: 2s;
+}
+
+
+@keyframes progress-bar {
+  0% {
+    width: 0;
+  }
+}

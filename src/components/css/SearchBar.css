@@ -1,0 +1,9 @@
+.searchBar {
+  width: 100%;
+  height: 13vw;
+  min-height: 13vw;
+  border-radius: 3px;
+  margin-top: 7vw;
+
+  --background: rgb(39, 40, 44);
+}

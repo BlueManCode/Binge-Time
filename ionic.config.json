@@ -1,0 +1,7 @@
+{
+  "name": "Binge Time",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

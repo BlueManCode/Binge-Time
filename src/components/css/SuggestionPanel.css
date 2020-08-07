@@ -1,0 +1,9 @@
+.inner-container span {
+  font-size: 5vw;
+  font-weight: bold;
+}
+
+.showcase {
+  margin-top: 10px;
+  column-count: 4;
+}
